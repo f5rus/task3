@@ -2,6 +2,7 @@
 	
 	$tree = array();
 
+	//заполняю массив данными из файла
 	$handle = fopen("categories.csv", "r");
 	while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) 
 	{
@@ -12,7 +13,7 @@
 
 	fclose($handle);
 
-	
+	//функция рекурсивного вывода дерева
 	function display($parent,$tree)
 	{		
 		foreach($tree as $d)		
@@ -26,6 +27,7 @@
 			echo "</ul>";
 		}
 	}	
-		
+	
+	//вывод корня дерева	
 	display("",$tree);
 ?> 
