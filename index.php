@@ -22,6 +22,7 @@
 			if($d[1]==$parent)
 			{
 				echo "<li>".$d[2]."</li>";
+				//вывыод дочерних элементов
 				display($d[0],$tree);
 			}
 			echo "</ul>";
